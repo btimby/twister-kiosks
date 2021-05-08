@@ -1,0 +1,12 @@
+version: '3.3'
+
+services:
+
+  django:
+    build:
+      context: .
+    volumes:
+      - "./.data/:/var/lib/data"
+      - "./twister:/usr/src/app:ro"
+    ports:
+      - 8000:8000
