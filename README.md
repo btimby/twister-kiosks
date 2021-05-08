@@ -16,9 +16,9 @@ Twister is a federated microblogging service.
 
 What does that mean? I am glad you asked. First let me define some terms.
 
- - Federated, multiple distinct entities working as one.
- - Microblogging, short messages including text or multimedia.
- - IPFS, a global peer to peer network.
+ - **Federated** multiple distinct entities working as one.
+ - **Microblogging** short messages including text or multimedia.
+ - **IPFS** a global peer to peer network.
 
 Anyone can make twister a part of their website. Twister then provides a portal
 to a global microblogging service. Each twister portal can host multiple user
@@ -115,12 +115,21 @@ You can install the javascript package and incorportate it into your website.
 
 ## Development
 
+There are many ways to help out!
+
+ - Contribute a new portal. Perhaps for another programming language or as a
+   plugin for a different website building / hosting platform.
+ - Contribute to existing portals.
+ - Contribute to documentation.
+ - Create new ways to deploy Twister such as AWS.
+ - Host an open portal.
+
 There are 4 distinct code modules or sub-projects.
 
-1. js/ - The node.js version of the portal.
-2. python/ - The Python/Django version of the portal.
-3. wordpress/ - The wordpress plugin (PHP) version of the portal.
-4. vue/ - The microblogging application. What the above portals "connect" to.
+1. 'js/' The node.js version of the portal.
+2. 'python/' The Python/Django version of the portal.
+3. 'wordpress/' The wordpress plugin (PHP) version of the portal.
+4. 'vue/' The microblogging application. What the above portals "connect" to.
 
 Obviously, the portals are kept small while the service (being shared) contains
 the bulk of functionality.
@@ -134,10 +143,10 @@ The microblogging service can be started by:
 
 Each portal can then be started by:
 
-'''bash
+```bash
     cd js/ # or python/ or wordpress/
     make up
-'''
+```
 
 The microblogging service and at least one portal must be running for the
 system to function. Each portal runs on a unique port, so they can ALL run at
