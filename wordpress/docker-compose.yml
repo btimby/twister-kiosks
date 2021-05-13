@@ -29,3 +29,15 @@ services:
       - "./.data/wordpress:/var/www/html"
       - "./.data/plugins:/var/www/html/wp-content/plugins"
       - "./twister:/var/www/html/wp-content/plugins/twister:ro"
+
+  wpcli:
+    depends_on:
+      - wordpress
+    image: 'wordpress:5.7-cli'
+    environment:
+      WORDPRESS_DB_HOST: 'db:3306'
+      WORDPRESS_DB_USER: wordpress_user
+      WORDPRESS_DB_PASSWORD: wordpress_password
+      WORDPRESS_DB_NAME: wordpress_db
+    volumes_from:
+      - wordpress

@@ -1,8 +1,9 @@
-from django.urls import path
+from django.urls import path, include
 
 from main import views
 
 
 urlpatterns = [
-    path('.twister/users.json', views.user_list),
+    path('', views.home),
+    path('personas.json', views.persona_list),
 ]
